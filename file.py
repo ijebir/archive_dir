@@ -1,6 +1,7 @@
 class file(object):
 
-    def __init__(self, local_path, type="file"):
+    def __init__(self, file_name, local_path, type="file"):
+        self.file_name = file_name
         self.local_path = local_path
         self.type = type
         self.children = []
@@ -10,10 +11,16 @@ class file(object):
         self.children.append(tmp)
 
     def get_path():
-        return str(local_path)
+        return str(self.local_path)
+    
+    def get_type():
+        return str(self.type)
+    
+    def build_path():
+        return self.local_path + "/" + self.file_name
 
     def __str__(self):
-        str = "filepath: " + self.local_path
-        for elm in self.children:
-            str += "--" + elm.get_path()
-        return str
+        str = self.build_path() + " (" + self.get_type + ")"
+        #for elm in self.children:
+        #    str += "--" + elm.get_path()
+        #return str
