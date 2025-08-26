@@ -1,6 +1,7 @@
 import os
 
 max_uproot = 1
+max_downroot = 1
 
 # { "path": "", "file": "", "type": "", "isIgnore": False }
 
