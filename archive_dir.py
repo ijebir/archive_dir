@@ -1,5 +1,5 @@
 import os
-from file import file
+from file_dir import file_dir
 
 max_uproot = 1
 max_downroot = 1
@@ -13,7 +13,8 @@ file_list = []
 def scan_directory(path):
     for entry in os.listdir(path):
         if os.path.isfile(os.path.join(path, entry)):
-            file_list.append(file(os.path.join(path, entry)))
+            #file_list.append(file(os.path.join(path, entry)))
+            file_list.append(file_dir("..", entry, "file"))
             print(file_list[0])
             # Add to DS
         else:
@@ -29,11 +30,15 @@ def scan_directory(path):
 #else:
 #    print("program closing")
 
-a = file("../", ".", "dir")
-print(a)
+#a = file("../", "./", "dir")
+#print(a)
 
+#a = file_dir(".", "a", "dir")
+#b = file_dir("./a", "b", "file")
+#print(a)
+#print(b)
 
-
+scan_directory("../")
 
 
 # We need to provide the possibility of skipping a directory (all files will be included)
