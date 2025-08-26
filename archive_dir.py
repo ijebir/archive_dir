@@ -1,7 +1,10 @@
 import os
+from file import file
 
 max_uproot = 1
 max_downroot = 1
+
+file_list = []
 
 # { "path": "", "file": "", "type": "", "isIgnore": False }
 
@@ -10,7 +13,8 @@ max_downroot = 1
 def scan_directory(path):
     for entry in os.listdir(path):
         if os.path.isfile(os.path.join(path, entry)):
-            print(path, entry)
+            file_list.append(file(os.path.join(path, entry)))
+            print(file_list[0])
             # Add to DS
         else:
             # Check if directory shoulde be included, if so traverse

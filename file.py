@@ -9,5 +9,11 @@ class file(object):
         tmp = file()
         self.children.append(tmp)
 
+    def get_path():
+        return str(local_path)
+
     def __str__(self):
-        print("filepath: ", self.local_path)
+        str = "filepath: " + self.local_path
+        for elm in self.children:
+            str += "--" + elm.get_path()
+        return str
