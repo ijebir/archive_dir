@@ -22,12 +22,15 @@ def scan_directory(path):
             print("")
 
 # Init
-print("This tool will archive into zip the contents of all files above this dir")
-if input("Proceed, y to continue, or any key otherwise: ") == "y":
-    print("Checking directories...")
-    scan_directory("./")
-else:
-    print("program closing")
+#print("This tool will archive into zip the contents of all files above this dir")
+#if input("Proceed, y to continue, or any key otherwise: ") == "y":
+#    print("Checking directories...")
+#    scan_directory("./")
+#else:
+#    print("program closing")
+
+a = file("../", ".", "dir")
+print(a)
 
 
 
