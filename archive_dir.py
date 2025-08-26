@@ -2,6 +2,8 @@ import os
 
 max_uproot = 1
 
+# { "path": "", "file": "", "type": "", "isIgnore": False }
+
 # We recursively to check the directory above root for files other folders
 # Maybe define a max_depth for recursively looking into dir
 def scan_directory(path):
@@ -22,7 +24,7 @@ if input("Proceed, y to continue, or any key otherwise: ") == "y":
 else:
     print("program closing")
 
-# { "path": "", "file": "", "type": "", "isIgnore": False }
+
 
 
 
